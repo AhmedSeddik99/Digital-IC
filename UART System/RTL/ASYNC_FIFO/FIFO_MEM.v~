@@ -1,0 +1,33 @@
+
+module FIFO_MEM #(parameter PTR_WD = 4, DATA_WD = 8, FIFO_DP = 8) (
+  input       wire        [DATA_WD-1:0]       WR_DATA,
+  input       wire                            W_CLK, W_RST,
+  input       wire                            W_INC, FULL,
+  input       wire        [PTR_WD-2:0]        wr_addr, rd_addr,
+  output      reg         [DATA_WD-1:0]       RD_DATA                           
+);
+
+
+  reg       [DATA_WD-1:0]       MEM       [FIFO_DP-1:0];
+  
+  integer i;
+  
+always@ (posedge W_CLK or negedge W_RST)
+  begin
+    if(~W_RST)
+      begin
+        for(i=0 ; i<FIFO_DP ; i=i+1)
+          MEM[i] <= 'b0;
+      end
+        
+    else if(~FULL && W_INC)
+      MEM[wr_addr] <= WR_DATA;
+      
+  end  
+
+always@ (*)
+  begin
+    RD_DATA = FIFO_MEM[rd_addr];
+  end
+
+endmodule
