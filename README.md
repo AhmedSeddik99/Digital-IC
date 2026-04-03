@@ -15,14 +15,10 @@
 2) Supports both encryption and decryption datapaths following standard AES transformations.
 3) Key Expansion for round key generation supports standard AES configurations (AES-128, AES-192 & AES-256) dynamically
 4) Modular RTL design of AES stages:
-   
-    i.   SubBytes (S-box substitution)
-
-    ii.  ShiftRows transformation
-
-    iii. MixColumns operation
-
-    iv.  AddRoundKey stage
+    * SubBytes (S-box substitution)
+    * ShiftRows transformation
+    * MixColumns operation
+    * AddRoundKey stage
 
 
 
