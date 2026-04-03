@@ -1,19 +1,19 @@
 ﻿# Digital-IC
 
 ## RTL to GDS Implementation of Low Power Configurable Multi Clock Digital "UART" System:
-1) Efficient RTL Coding Using Verilog language
-2) Building Advanced Self-checking Verilog Test-bench 
-3) RTL Synthesis on Design Compiler   
-4) Design For Testing (DFT) Insertion
-5) Formal Verification Post-Synthesis & Post-DFT & Post-PnR
-6) ASIC Flow including (Floorplanning, Pin Placement, Clock Tree Synthesis, Placement, Routing, Timing Closure, Chip Finishing, Sign Off)
+1) Efficient RTL Coding Using Verilog language.
+2) Building Advanced Self-checking Verilog Test-bench. 
+3) RTL Synthesis on Design Compiler.   
+4) Design For Testing (DFT) Insertion.
+5) Formal Verification Post-Synthesis & Post-DFT & Post-PnR.
+6) ASIC Flow including (Floorplanning, Pin Placement, Clock Tree Synthesis, Placement, Routing, Timing Closure, Chip Finishing, Sign Off).
 
 
 
 ## RTL Design for AES
 1) Designed a fully synthesizable RTL design of the Advanced Encryption Standard (AES) algorithm using Verilog.
 2) Supports both encryption and decryption datapaths following standard AES transformations.
-3) Key Expansion for round key generation supports standard AES configurations (AES-128, AES-192 & AES-256) dynamically
+3) Key Expansion for round key generation supports standard AES configurations (AES-128, AES-192 & AES-256) dynamically.
 4) Modular RTL design of AES stages:
     * SubBytes (S-box substitution)
     * ShiftRows transformation
@@ -22,7 +22,7 @@
 
 
 
-### RTL Design for pipelined RISC-V
+## RTL Design for pipelined RISC-V
 1) Designed a synthesizable RTL implementation of a 5-stage pipelined RISC-V processor using Verilog.
 2) Implemented full instruction flow across pipeline stages with hazard handling and control logic.
 3) Implemented classic 5 pipeline stages:   
@@ -36,4 +36,13 @@
     * Immediate (I-type)
     * Load/Store
     * Branch instructions
-5) Designed pipeline registers between stages to ensure proper data flow and timing
+5) Designed pipeline registers between stages to ensure proper data flow and timing.
+
+
+
+## Modeling & RTL Design for 16-bit CORDIC
+1) Developed Python modeling and RTL for a 16-bit fixed-point CORDIC processor.
+2) Supports rotation mode and vectoring mode for sin/cos and arctangent computations respectively.
+3) Designed for hardware-efficient computation without using multipliers or dividers.
+4) Configurable number of iterations for precision vs. latency trade-off.
+5) Includes lookup table for precomputed arctangent values.
